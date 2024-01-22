@@ -1,0 +1,9 @@
+:root {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: normal;
+}
+
+li {
+    font-size: large;
+    list-style-type: none;
+}
