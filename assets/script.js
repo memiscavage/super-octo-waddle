@@ -8,29 +8,29 @@ var questionChoices = document.querySelector(".choices");
 //Created array to dynamically change quiz questions and answer choices as JS pushes user through the quiz
 var quizArray = [
     {
-        question:"placeholder", 
-        choices:["A", "B", "C", "D"],
-        correct:"C"
+        question:"Legumes are rich in which nutrients?", 
+        choices:["A. Protein", "B. Iron", "C. Fiber", "D. All of the above"],
+        correct:"D. All of the above"
     },
     {
-        question:"placeholder2", 
-        choices:["A", "B", "C", "D"],
-        correct:"C"
+        question:"Which vitamin helps your body absorb more iron?", 
+        choices:["A. Vitamin K", "B. Vitamin A", "C. Vitamin C", "D. Vitamin B"],
+        correct:"C. Vitamin C"
     },
     {
-        question:"placeholder3", 
-        choices:["A", "B", "C", "D"],
-        correct:"C"
+        question:"What is the daily recommended serving size for vegetables for adults?", 
+        choices:["A. 5 cups", "B. 1 cup", "C. 2.5 cups", "D. 1.5 cups"],
+        correct:"C. 2.5 cups"
     },
     {
-        question:"placeholder4", 
-        choices:["A", "B", "C", "D"],
-        correct:"C"
+        question:"On average, how many calories does a breastfeeding person burn in a day?", 
+        choices:["A. 600 calories", "B. 300 calories", "C. 250 calories", "D. 400 calories"],
+        correct:"A. 600 calories"
     },
     {
-        question:"placeholder5", 
-        choices:["A", "B", "C", "D"],
-        correct:"C"
+        question:"How many grams are sugar are in a medium-sized banana?", 
+        choices:["A. 2 grams", "B. 14 grams", "C. 8 grams", "D. 25 grams"],
+        correct:"B. 14 grams"
     },
 ]
 var arrayIndex = 0
