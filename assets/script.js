@@ -48,7 +48,7 @@ function quizProgression(){
     questionChoices.innerHTML="";
     quizArray[arrayIndex].choices.forEach(function(choice){
         var li = document.createElement("li")
-        li.textContent=choice; //set this as li so it appears as a list beneath the quiz question
+        li.textContent=choice; //set this as li so it appears as the list beneath the quiz question
         li.onclick=checkAnswer;
         questionChoices.append(li);
     })
@@ -65,3 +65,7 @@ function checkAnswer(){
     quizProgression();
 }
 // Create function for timer
+setInterval(function countdown() {
+    var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    
+})
