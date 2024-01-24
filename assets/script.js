@@ -1,4 +1,11 @@
-// Create function for timer
+//Declared variables here
+var startBtn = document.querySelector(".start-btn");
+var quizHeader = document.querySelector(".header");
+var quizQuestions = document.querySelector("#quiz-questions");
+var questionTitles = document.querySelector(".question-title");
+var questionChoices = document.querySelector(".choices");
+
+//Created array to dynamically change quiz questions and answer choices as JS pushes user through the quiz
 var quizArray = [
     {
         question:"placeholder", 
@@ -26,34 +33,27 @@ var quizArray = [
         correct:"C"
     },
 ]
-
 var arrayIndex = 0
-//Create function for arrayIndex++ to propel user through the questions
-//
-var startBtn = document.querySelector(".start-btn");
-var quizHeader = document.querySelector(".header");
-var quizQuestions = document.querySelector("#quiz-questions");
-var questionTitles = document.querySelector(".question-title");
-var questionChoices = document.querySelector(".choices");
 
-//add event listener to access quiz
+//add event listener to access quiz after 'start' button is clicked
 startBtn.addEventListener("click", function (){
     quizHeader.classList.add("hidden");
     quizQuestions.classList.remove("hidden");
     quizProgression();
 })
 
+//This function provides the questions to the user and allows for answer choice selection
 function quizProgression(){
     questionTitles.textContent=quizArray[arrayIndex].question;
     questionChoices.innerHTML="";
     quizArray[arrayIndex].choices.forEach(function(choice){
         var li = document.createElement("li")
-        li.textContent=choice;
+        li.textContent=choice; //set this as li so it appears as a list beneath the quiz question
         li.onclick=checkAnswer;
         questionChoices.append(li);
     })
 }
-//This function is to check the answer and push 
+//This function is to check the answer and push user forward through quiz after answer choice is selected
 function checkAnswer(){
     console.log(this);
     if (this.textContent===quizArray[arrayIndex].correct) {
@@ -64,3 +64,4 @@ function checkAnswer(){
     arrayIndex++;
     quizProgression();
 }
+// Create function for timer
