@@ -6,22 +6,22 @@ var quizArray = [
         correct:"C"
     },
     {
-        question:"placeholder", 
+        question:"placeholder2", 
         choices:["A", "B", "C", "D"],
         correct:"C"
     },
     {
-        question:"placeholder", 
+        question:"placeholder3", 
         choices:["A", "B", "C", "D"],
         correct:"C"
     },
     {
-        question:"placeholder", 
+        question:"placeholder4", 
         choices:["A", "B", "C", "D"],
         correct:"C"
     },
     {
-        question:"placeholder", 
+        question:"placeholder5", 
         choices:["A", "B", "C", "D"],
         correct:"C"
     },
@@ -53,7 +53,14 @@ function quizProgression(){
         questionChoices.append(li);
     })
 }
-
+//This function is to check the answer and push 
 function checkAnswer(){
     console.log(this);
+    if (this.textContent===quizArray[arrayIndex].correct) {
+        console.log("correct")        
+    } else {
+        console.log("wrong")
+    }
+    arrayIndex++;
+    quizProgression();
 }
