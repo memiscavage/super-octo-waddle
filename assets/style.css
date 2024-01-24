@@ -7,14 +7,25 @@ body {
    display: flex;
    align-items: center;
    justify-content: center;
+   background-color: #FAEDF3;
 }
 
 li {
     font-size: large;
     list-style-type: none;
+    cursor: pointer;
 }
 
 .hidden {
     display: none;
 }
 
+.start-btn {
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.start-btn:hover {
+    background-color: #FEBAD6;
+    color: white;
+}
