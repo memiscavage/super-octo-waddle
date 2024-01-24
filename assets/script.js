@@ -65,7 +65,7 @@ function checkAnswer(){
     quizProgression();
 }
 // Create function for timer
-setInterval(function countdown() {
-    var seconds = Math.floor((diff % (1000 * 60)) / 1000);
-    
-})
+//setInterval(function countdown() {
+    //var seconds = Math.floor((diff % (1000 * 60)) / 100);
+
+//})

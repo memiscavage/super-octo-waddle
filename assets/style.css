@@ -3,6 +3,12 @@
     font-style: normal;
 }
 
+body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
 li {
     font-size: large;
     list-style-type: none;
@@ -11,3 +17,4 @@ li {
 .hidden {
     display: none;
 }
+
