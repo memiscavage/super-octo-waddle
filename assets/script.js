@@ -43,6 +43,7 @@ startBtn.addEventListener("click", function (){
     quizHeader.classList.add("hidden");
     quizQuestions.classList.remove("hidden");
     quizProgression();
+    quizTimer();
 })
 
 //This function provides the questions to the user and allows for answer choice selection
@@ -61,7 +62,7 @@ function quizProgression(){
     questionChoices.textContent="";
     submitBtn.classList.remove("hidden");
     finalScore.classList.remove("hidden");
-    finalScore.textContent=score;
+    finalScore.textContent=("Final score: ", score);
 }}
 
 
@@ -81,6 +82,7 @@ function checkAnswer(){
 }
 
 // Create function for timer
+function quizTimer(){
 var countDown = 60;
 var interval = setInterval(function(){
     document.querySelector('.countDown').textContent=countDown;
@@ -88,8 +90,11 @@ var interval = setInterval(function(){
     if (countDown === 0){
         clearInterval(interval);
         alert("Time is up!");
+        questionTitles.textContent="Your time is up.";
+        questionChoices.textContent="Please try again."
+        finalScore.textContent=("Final score: ", score);
     }
-}, 1000);
+}, 1000);}
 
 submitBtn.addEventListener("click", function (){
    endQuiz();
@@ -97,8 +102,5 @@ submitBtn.addEventListener("click", function (){
 
 //Create function to display and save score
 function endQuiz(){
-    //if correct, correct = +1, else false = 0
-    //Save users' info to local site (one line of code)
-    //Tally correct responses
-    //Write code to display score
+   
 }
