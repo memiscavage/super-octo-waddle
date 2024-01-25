@@ -43,7 +43,7 @@ startBtn.addEventListener("click", function (){
     quizHeader.classList.add("hidden");
     quizQuestions.classList.remove("hidden");
     quizProgression();
-    quizTimer();
+    //quizTimer(); -- commented out as this broke the countdown for wrong answers. Will return to fix and resubmit
 })
 
 //This function provides the questions to the user and allows for answer choice selection
@@ -82,7 +82,7 @@ function checkAnswer(){
 }
 
 // Create function for timer
-function quizTimer(){
+//function quizTimer(){ --- commented it out as it broke my countdown for wrong answers
 var countDown = 60;
 var interval = setInterval(function(){
     document.querySelector('.countDown').textContent=countDown;
@@ -94,13 +94,13 @@ var interval = setInterval(function(){
         questionChoices.textContent="Please try again."
         finalScore.textContent=("Final score: ", score);
     }
-}, 1000);}
+}, 1000);//}
 
 submitBtn.addEventListener("click", function (){
    endQuiz();
 })
 
-//Create function to display and save score
+//Create function to display and save score -- will complete for resubmittion
 function endQuiz(){
    
 }
