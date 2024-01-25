@@ -57,7 +57,7 @@ function quizProgression(){
 function checkAnswer(){
     console.log(this);
     if (this.textContent===quizArray[arrayIndex].correct) {
-        console.log("correct")        
+        console.log("Correct!")        
     } else {
         console.log("wrong")
     }

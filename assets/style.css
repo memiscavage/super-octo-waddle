@@ -23,6 +23,7 @@ li {
 .start-btn {
     cursor: pointer;
     border-radius: 12px;
+    transition-duration: 0.4s;
 }
 
 .start-btn:hover {
