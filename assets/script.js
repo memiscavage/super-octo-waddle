@@ -53,7 +53,10 @@ function quizProgression(){
         li.onclick=checkAnswer;
         questionChoices.append(li);
     })
-} else {questionTitles.textContent="You've completed the quiz! 🎉"}
+} else {
+    questionTitles.textContent="You've completed the quiz! 🎉";
+    questionChoices.textContent="";
+}
 console.log(arrayIndex);
 }
 //Create function to display and save score
