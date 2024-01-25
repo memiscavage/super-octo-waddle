@@ -44,6 +44,7 @@ startBtn.addEventListener("click", function (){
 
 //This function provides the questions to the user and allows for answer choice selection
 function quizProgression(){
+    if (arrayIndex < quizArray.length) {    
     questionTitles.textContent=quizArray[arrayIndex].question;
     questionChoices.innerHTML="";
     quizArray[arrayIndex].choices.forEach(function(choice){
@@ -52,13 +53,25 @@ function quizProgression(){
         li.onclick=checkAnswer;
         questionChoices.append(li);
     })
+} else {questionTitles.textContent="You've completed the quiz! 🎉"}
+console.log(arrayIndex);
 }
+//Create function to display and save score
+function endQuiz(){
+    //We want to display none for quiz titles and answer
+    //if correct, correct = +1, else false = 0
+    //Save users' info to local site (one line of code)
+    //Tally correct responses
+    //Write code to display score
+}
+
 //This function is to check the answer and push user forward through quiz after answer choice is selected
 function checkAnswer(){
     console.log(this);
     if (this.textContent===quizArray[arrayIndex].correct) {
         console.log("Correct!")        
     } else {
+        countDown -10;
         console.log("Incorrect")
     }
     arrayIndex++;
@@ -67,10 +80,12 @@ function checkAnswer(){
 // Create function for timer
 var countDown = 60;
 var interval = setInterval(function(){
-  document.getElementsByClassName('.countDown').innerHTML=countDown;
+    document.querySelector('.countDown').textContent=countDown;
   countDown--;
   if (countDown === 0){
     clearInterval(interval);
     alert("Time is up!");
+    //Create function to take away time for wrong answer
   }
 }, 1000);
+

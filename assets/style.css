@@ -3,6 +3,19 @@
     font-style: normal;
 }
 
+h1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 body {
    display: flex;
    align-items: center;
@@ -22,6 +35,8 @@ li {
 
 .start-btn {
     cursor: pointer;
+    width: 120px;
+    height: 40px;
     border-radius: 12px;
     transition-duration: 0.4s;
 }
