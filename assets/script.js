@@ -28,7 +28,7 @@ var quizArray = [
         correct:"A. 600 calories"
     },
     {
-        question:"How many grams are sugar are in a medium-sized banana?", 
+        question:"How many grams of sugar are in a medium-sized banana?", 
         choices:["A. 2 grams", "B. 14 grams", "C. 8 grams", "D. 25 grams"],
         correct:"B. 14 grams"
     },
@@ -59,13 +59,18 @@ function checkAnswer(){
     if (this.textContent===quizArray[arrayIndex].correct) {
         console.log("Correct!")        
     } else {
-        console.log("wrong")
+        console.log("Incorrect")
     }
     arrayIndex++;
     quizProgression();
 }
 // Create function for timer
-//setInterval(function countdown() {
-    //var seconds = Math.floor((diff % (1000 * 60)) / 100);
-
-//})
+var countDown = 60;
+var interval = setInterval(function(){
+  document.getElementsByClassName('.countDown').innerHTML=countDown;
+  countDown--;
+  if (countDown === 0){
+    clearInterval(interval);
+    alert("Time is up!");
+  }
+}, 1000);
