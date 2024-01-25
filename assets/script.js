@@ -6,7 +6,7 @@ var questionTitles = document.querySelector(".question-title");
 var questionChoices = document.querySelector(".choices");
 var submitBtn = document.querySelector("#submit-btn");
 var score = 0;
-
+var finalScore = document.querySelector("#finalScore")
 
 //Created array to dynamically change quiz questions and answer choices as JS pushes user through the quiz
 var quizArray = [
@@ -60,6 +60,8 @@ function quizProgression(){
     questionTitles.textContent="You've completed the quiz! 🎉";
     questionChoices.textContent="";
     submitBtn.classList.remove("hidden");
+    finalScore.classList.remove("hidden");
+    finalScore.textContent=score;
 }}
 
 
@@ -67,16 +69,15 @@ function quizProgression(){
 function checkAnswer(){
     console.log(this);
     if (this.textContent===quizArray[arrayIndex].correct) {
-        score+1;
+        score++;
         console.log("Correct!")        
     } else {
         countDown = countDown-10; //This line is to remove 10 seconds for incorrect answers
-        score+0;
         console.log("Incorrect")
     }
     arrayIndex++;
     quizProgression();
-    console.log(score, "score:")
+    console.log("Score:", score)
 }
 
 // Create function for timer
