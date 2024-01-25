@@ -46,7 +46,7 @@ li {
     color: white;
 }
 
-.submit-btn {
+#submit-btn {
     cursor: pointer;
     width: 120px;
     height: 40px;
@@ -54,7 +54,7 @@ li {
     transition-duration: 0.4s;
 }
  
-.submit-btn:hover {
+#submit-btn:hover {
     background-color: #FEBAD6;
     color: white;
 }

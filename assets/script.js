@@ -4,6 +4,7 @@ var quizHeader = document.querySelector(".header");
 var quizQuestions = document.querySelector("#quiz-questions");
 var questionTitles = document.querySelector(".question-title");
 var questionChoices = document.querySelector(".choices");
+var submitBtn = document.querySelector("#submit-btn")
 
 //Created array to dynamically change quiz questions and answer choices as JS pushes user through the quiz
 var quizArray = [
@@ -56,12 +57,15 @@ function quizProgression(){
 } else {
     questionTitles.textContent="You've completed the quiz! 🎉";
     questionChoices.textContent="";
-}
-console.log(arrayIndex);
-}
+    submitBtn.classList.remove("hidden");
+}}
+
+submitBtn.addEventListener("click", function (){
+   endQuiz();
+})
+
 //Create function to display and save score
 function endQuiz(){
-    //We want to display none for quiz titles and answer
     //if correct, correct = +1, else false = 0
     //Save users' info to local site (one line of code)
     //Tally correct responses
