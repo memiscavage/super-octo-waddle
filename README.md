@@ -23,4 +23,4 @@ WHEN the game is over \
 THEN I can save my initials and score 
 
 ### Resources
-Received assistance from TA Walter Perry for 
+Received assistance from TA Walter Perry for script.js lines 76, and 86-96.
