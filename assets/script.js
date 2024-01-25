@@ -4,7 +4,9 @@ var quizHeader = document.querySelector(".header");
 var quizQuestions = document.querySelector("#quiz-questions");
 var questionTitles = document.querySelector(".question-title");
 var questionChoices = document.querySelector(".choices");
-var submitBtn = document.querySelector("#submit-btn")
+var submitBtn = document.querySelector("#submit-btn");
+var score = 0;
+
 
 //Created array to dynamically change quiz questions and answer choices as JS pushes user through the quiz
 var quizArray = [
@@ -60,6 +62,34 @@ function quizProgression(){
     submitBtn.classList.remove("hidden");
 }}
 
+
+//This function is to check the answer and push user forward through quiz after answer choice is selected
+function checkAnswer(){
+    console.log(this);
+    if (this.textContent===quizArray[arrayIndex].correct) {
+        score+1;
+        console.log("Correct!")        
+    } else {
+        countDown = countDown-10; //This line is to remove 10 seconds for incorrect answers
+        score+0;
+        console.log("Incorrect")
+    }
+    arrayIndex++;
+    quizProgression();
+    console.log(score, "score:")
+}
+
+// Create function for timer
+var countDown = 60;
+var interval = setInterval(function(){
+    document.querySelector('.countDown').textContent=countDown;
+    countDown--;
+    if (countDown === 0){
+        clearInterval(interval);
+        alert("Time is up!");
+    }
+}, 1000);
+
 submitBtn.addEventListener("click", function (){
    endQuiz();
 })
@@ -71,28 +101,3 @@ function endQuiz(){
     //Tally correct responses
     //Write code to display score
 }
-
-//This function is to check the answer and push user forward through quiz after answer choice is selected
-function checkAnswer(){
-    console.log(this);
-    if (this.textContent===quizArray[arrayIndex].correct) {
-        console.log("Correct!")        
-    } else {
-        countDown -10;
-        console.log("Incorrect")
-    }
-    arrayIndex++;
-    quizProgression();
-}
-// Create function for timer
-var countDown = 60;
-var interval = setInterval(function(){
-    document.querySelector('.countDown').textContent=countDown;
-  countDown--;
-  if (countDown === 0){
-    clearInterval(interval);
-    alert("Time is up!");
-    //Create function to take away time for wrong answer
-  }
-}, 1000);
-
