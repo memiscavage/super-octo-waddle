@@ -45,3 +45,16 @@ li {
     background-color: #FEBAD6;
     color: white;
 }
+
+.submit-btn {
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
+ 
+.submit-btn:hover {
+    background-color: #FEBAD6;
+    color: white;
+}
